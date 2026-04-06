@@ -190,6 +190,21 @@ def inject_theme(theme: dict[str, str]) -> None:
                 color: var(--muted);
                 font-size: 0.9rem;
             }}
+            [data-testid="stNumberInput"] input,
+            [data-testid="stTextInput"] input,
+            [data-testid="stDataEditor"] input {{
+                color: #111111 !important;
+                -webkit-text-fill-color: #111111 !important;
+                caret-color: #111111 !important;
+                font-weight: 600 !important;
+            }}
+            [data-testid="stNumberInput"] input::placeholder,
+            [data-testid="stTextInput"] input::placeholder,
+            [data-testid="stDataEditor"] input::placeholder {{
+                color: #111111 !important;
+                -webkit-text-fill-color: #111111 !important;
+                opacity: 0.82 !important;
+            }}
         </style>
         """,
         unsafe_allow_html=True,
